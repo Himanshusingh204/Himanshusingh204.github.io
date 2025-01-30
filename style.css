@@ -1,18 +1,22 @@
-body{
+body {
     background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.container{
- margin: 100px 0 0 200px;
- width: 70%;
- height: 450px;
- display: flex;
- justify-content: center;
- gap: 10px;
+.container {
+    margin: 100px auto; /* Center the container on the page */
+    width: 70%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden; /* Hide overflowing images */
 }
 
-.container img{
-    width: 10%;
+/* Style for the images inside the container */
+.container img {
+    width: 10%; /* Set the initial width of the images */
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -20,6 +24,46 @@ body{
     transition: all ease-in-out 0.5s;
 }
 
-.container img:hover{
-    width: 25%;
+/* Hover effect for images */
+.container img:hover {
+    width: 25%; /* Enlarge the image when hovered */
 }
+
+/* Mobile and tablet responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Increase the container width on smaller screens */
+        margin: 50px auto; /* Adjust margin for better spacing */
+    }
+
+    .container img {
+        width: 20%; /* Set the image width to 20% on smaller screens */
+    }
+
+    /* Hover effect on mobile: Avoid enlarging the image on hover */
+    .container img:hover {
+        width: 20%; /* Keep the width the same on hover */
+    }
+}
+
+/* Very small devices (e.g., phones in portrait mode) */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%; /* Full width for very small devices */
+        margin: 30px auto; /* Adjust the margin for better spacing */
+    }
+
+    .container img {
+        width: 30%; /* Increase the image width to 30% on very small screens */
+    }
+
+    /* Hover effect: Keep the width same on hover */
+    .container img:hover {
+        width: 30%; /* Keep the width same on hover */
+    }
+}
+/* Custom cursor */
+body {
+    cursor: url('path-to-your-custom-cursor.png'), auto;
+  }
+  
